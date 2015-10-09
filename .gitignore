@@ -2,3 +2,4 @@ classes\
 lib\
 model\*.png
 src\*.class
+src\*~
