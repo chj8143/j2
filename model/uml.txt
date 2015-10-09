@@ -1,0 +1,30 @@
+class InputTest{
+  +static main:void
+}
+
+abstract class InputStream{
+  +int read()
+  +int read(byte[] b, int offset, int len)
+}
+
+class FilterInputStream{
+  #InputStream:in
+}
+
+class FileInputStream{
+  +FileInputStream(File file)
+}
+
+class LowerCaseInputStream{
+  +LowerCaseInputStream
+}
+
+class BufferedInputStream{
+  +InputStream:in
+}
+
+InputStream <|-- FilterInputStream
+InputStream -- InputTest
+InputStream <|-- FileInputStream
+FilterInputStream <|-- LowerCaseInputStream
+FilterInputStream <|-- BufferedInputStream
