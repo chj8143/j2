@@ -1,0 +1,64 @@
+@startuml
+
+abstract class InputStream{
+  read():int
+  close():void 
+  mark(int readlimit):void 
+  markSupported():boolean
+  available():int
+  read(byte b[]):int
+  read(byte b[], int offset, int len):int
+  reset():void 
+  skip(long n):long
+}
+
+class FilterInputStream{
+  FilterInputStream(inputStream in)
+}
+
+class ByteArrayInputStream{
+  ByteArrayInputStreamI(byte b[])
+  ByteArrayInputStreamI(byte b[], int offset, int len)
+}
+
+class StringBufferInputStream{
+  
+}
+
+class FileInputStream{
+  FileInputStream(String file)
+  FileInputStream(File file)
+  FileInputStream(FileDescriptor fdObj)
+}
+
+
+class PushbackInputStream{
+  read(byte[] b, int off, int len):int
+  unread(int b):void 
+  unread(byte[] b):void 
+  unread(byte[] b, int offset, int len):void 
+}
+
+class LineNumberInputStream{
+  
+}
+
+class DataInputStream{
+  DataInputStream(inputStream in)
+}
+
+class BufferedInputStream{
+  BufferedInputStream(inputStream in)
+  BufferedInputStream(inputStream in, int size)
+}
+
+InputStream <|-- FilterInputStream
+InputStream <|-- FileInputStream
+InputStream <|-- ByteArrayInputStream
+InputStream <|-- StringBufferInputStream
+FilterInputStream <|-- PushbackInputStream
+FilterInputStream <|-- BufferedInputStream
+FilterInputStream <|-- DataInputStream
+FilterInputStream <|-- LineNumberInputStream
+
+@enduml

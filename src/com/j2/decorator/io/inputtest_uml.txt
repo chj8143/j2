@@ -1,6 +1,4 @@
-class InputTest{
-  +static main:void
-}
+@startuml
 
 abstract class InputStream{
   +int read()
@@ -24,7 +22,8 @@ class BufferedInputStream{
 }
 
 InputStream <|-- FilterInputStream
-InputStream -- InputTest
 InputStream <|-- FileInputStream
 FilterInputStream <|-- LowerCaseInputStream
 FilterInputStream <|-- BufferedInputStream
+
+@enduml
