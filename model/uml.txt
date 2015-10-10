@@ -1,4 +1,4 @@
-
+@startuml
 
 abstract class InputStream{
   +int read()
@@ -25,3 +25,5 @@ InputStream <|-- FilterInputStream
 InputStream <|-- FileInputStream
 FilterInputStream <|-- LowerCaseInputStream
 FilterInputStream <|-- BufferedInputStream
+
+@enduml
