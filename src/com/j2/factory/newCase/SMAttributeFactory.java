@@ -7,7 +7,7 @@ public class SMAttributeFactory implements FigureAttributeFactory {
  }
  
  public Shadow createShadow() {
-  return new nonShadow();
+  return new noShadow();
  }
 
  

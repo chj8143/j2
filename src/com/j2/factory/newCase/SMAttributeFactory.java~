@@ -3,7 +3,7 @@ package com.j2.factory.newCase;
 public class SMAttributeFactory implements FigureAttributeFactory {
  
  public Dimension createDimension() {
-  return new 2_Dimension();
+  return new TwoDimension();
  }
  
  public Shadow createShadow() {
@@ -12,8 +12,8 @@ public class SMAttributeFactory implements FigureAttributeFactory {
 
  
  public Colors[] createColors() {
-  Veggies veggies[] = { new Red(), new Blue(), new Orange() };
-  return Colors;
+  Colors colors[] = { new Red(), new Orange() };
+  return colors;
  }
  
 }
