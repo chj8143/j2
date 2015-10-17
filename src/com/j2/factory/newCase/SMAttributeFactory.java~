@@ -1,0 +1,19 @@
+package com.j2.factory.newCase;
+
+public class SMAttributeFactory implements FigureAttributeFactory {
+ 
+ public Dimension createDimension() {
+  return new 2_Dimension();
+ }
+ 
+ public Shadow createShadow() {
+  return new nonShadow();
+ }
+
+ 
+ public Colors[] createColors() {
+  Veggies veggies[] = { new Red(), new Blue(), new Orange() };
+  return Colors;
+ }
+ 
+}

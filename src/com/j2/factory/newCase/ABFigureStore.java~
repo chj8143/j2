@@ -1,0 +1,28 @@
+package com.j2.factory.newCase;
+
+public class ABFigureStore extends FiqureStore {
+ 
+ protected Figure createFigure(String item) {
+  Figure figure = null;
+  FigureAttributetFactory attributetFactory = 
+   new SMAttributeFactory();
+ 
+  if (item.equals("triangle")) {
+  
+   figure = new Triangle(attributetFactory);
+   figure.setName("AB Style Triangle");
+  
+  } else if (item.equals("square")) {
+ 
+   figure = new Square(attributetFactory);
+   figure.setName("AB Style Square");
+ 
+  } else if (item.equals("circle")) {
+ 
+   figure = new Circle(attributetFactory);
+   figure.setName("AB Style Circle");
+ 
+  }
+  return pizza;
+ }
+}
