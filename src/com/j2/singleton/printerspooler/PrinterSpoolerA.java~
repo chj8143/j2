@@ -4,7 +4,6 @@ public class PrinterSpoolerA extends PrinterSpooler {
  protected static PrinterSpooler uniqueInstance;
  
  private PrinterSpoolerA() {
-   System.out.println("--- This is A ---");
    super();
  }
  

@@ -4,7 +4,7 @@ public class ChocolateBoiler {
   private boolean empty;
   private boolean boiled;
   private static ChocolateBoiler uniqueInstance;
-  private static int numCalled = 0;
+  private static int numCalled = 1;
   
   private ChocolateBoiler() {
     empty = true;
@@ -16,7 +16,7 @@ public class ChocolateBoiler {
       System.out.println("Making unique instance of Chocolate Boiler");
       uniqueInstance = new ChocolateBoiler();
     }
-    System.out.println("Returning instance"+" -- numCalled: " + numCalled++);
+    System.out.println("Returning instance number: " + numCalled++);
     return uniqueInstance;
   }
   

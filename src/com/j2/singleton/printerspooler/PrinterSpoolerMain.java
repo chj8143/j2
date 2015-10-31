@@ -2,20 +2,21 @@ package com.j2.singleton.printerspooler;
 
 public class PrinterSpoolerMain {
   public static void main(String[] args) {
-    System.out.println("--- Printer Spooler with subclass ---");
+    System.out.println("--- Printer Spooler with subclass ---" + "\n");
     PrinterSpooler aa = PrinterSpoolerA.getInstance();
-    PrinterSpooler bb = PrinterSpoolerB.getInstance();
+    PrinterSpooler bb;
+    
     System.out.print("A - ");
+    aa.fill();
     aa.print();
-    System.out.print("B - ");
-    bb.print();
-    System.out.print("A - ");
     aa.drain();
+    System.out.println("---------------------------------------" + "\n");
+    
+    bb = PrinterSpoolerB.getInstance();
     System.out.print("B - ");
     bb.fill();
-    System.out.print("B - ");
     bb.print();
-    System.out.print("B - ");
     bb.drain();
+    System.out.println("---------------------------------------" + "\n");
   }
 }

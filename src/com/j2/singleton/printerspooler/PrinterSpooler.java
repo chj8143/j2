@@ -4,9 +4,10 @@ public class PrinterSpooler {
   private boolean empty;
   private boolean printed;
   protected static PrinterSpooler uniqueInstance;
+  private static int numCalled = 1;
   
   protected PrinterSpooler() { //this Printer works when it is empty.
-    empty = false;
+    empty = true;
     printed = false;
   }
   
@@ -15,6 +16,7 @@ public class PrinterSpooler {
       System.out.println("Making unique instance of PrinterSpooler");
       uniqueInstance = new PrinterSpooler();
     }
+    System.out.println("Returning instance: " + numCalled++);
     return uniqueInstance;
   }
  
@@ -37,9 +39,7 @@ public class PrinterSpooler {
     if (!isEmpty() && !isPrinted()) {
       System.out.println("Printing");
       printed = true;
-    }  
-    else
-      System.out.println("wait");
+    } 
   }
    
   public boolean isEmpty() { 
