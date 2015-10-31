@@ -1,0 +1,12 @@
+package com.j2.singleton.printerspooler;
+
+public class PrinterSpoolerA extends PrinterSpooler {
+ protected static PrinterSpooler uniqueInstance;
+ 
+ private PrinterSpoolerA() {
+   System.out.println("--- This is A ---");
+   super();
+ }
+ 
+ // useful methods here
+}
