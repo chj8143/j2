@@ -1,0 +1,23 @@
+package com.j2.command.party;
+
+public class AudioOffCommand implements Command {
+ Audio audio;
+ int prevVol;
+  
+ public AudioOffCommand(Audio audio) {
+  this.audio = audio;
+ }
+ 
+ public void execute() {
+  prevVol = audio.getVolume();
+  audio.off();
+ }
+ 
+ public void undo() {
+  switch (prevVol) {
+   case Audio.HIGH:  audio.high(); break;
+   case Audio.LOW:  audio.low(); break;
+   default:     audio.off(); break;
+  }
+ }
+}

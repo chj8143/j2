@@ -1,0 +1,33 @@
+package com.j2.command.party;
+
+public class Audio {
+ public static final int HIGH = 3;
+ public static final int LOW = 1;
+ public static final int OFF = 0;
+ String sound;
+ int vol;
+ 
+ public Audio(String sound) {
+  this.sound = sound;
+  vol = OFF;
+ }
+  
+ public void high() {
+  vol = HIGH;
+  System.out.println(sound + " audio volume is high");
+ } 
+ 
+ public void low() {
+  vol = LOW;
+  System.out.println(sound + " audio volume is low");
+ }
+  
+ public void off() {
+  vol = OFF;
+  System.out.println(sound + " audio is off");
+ }
+  
+ public int getVolume() {
+  return vol;
+ }
+}
