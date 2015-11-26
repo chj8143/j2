@@ -1,0 +1,25 @@
+package com.j2.iterator.dinermenu.before;
+
+import java.util.ArrayList;
+
+public class MenuTestDrive {
+  public static void main(String[] args) {
+    
+    printMenu();
+  }
+  public static void printMenu() {
+    PancakeHouseMenu p = new PancakeHouseMenu();
+    DinerMenu d = new DinerMenu();
+    ArrayList pitems = p.getMenuItems();
+    for(int i=0; i < pitems().size(); i++) {
+      MenuItem menuItem = (MenuItem)pitems.get(i);
+      System.out.println(menuItem.getName());
+    }
+    
+    MenuItem[] ditems=d.getMenuItems();
+    for(int i=0; i<ditems().length(); i++) {
+      MenuItem menuItem = ditems[i];
+      System.out.println(menuItem.getName());
+    }
+  }
+}
