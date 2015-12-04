@@ -1,0 +1,24 @@
+package com.j2.state.gumballstate;
+
+public class GumballMachineTestDrive {
+  public static void main(String[] args) {
+    GumballMachine gm = new GumballMachine(2);
+    System.out.println(gm);
+    
+    gm.insertQuarter();
+    gm.turnCrank();
+
+    System.out.println(gm);
+
+    gm.insertQuarter();
+    gm.turnCrank();
+    gm.insertQuarter();
+    gm.turnCrank();
+  
+    gm.refill(5);
+    gm.insertQuarter();
+    gm.turnCrank();
+
+    System.out.println(gm);
+ }
+}
